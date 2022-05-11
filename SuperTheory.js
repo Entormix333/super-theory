@@ -40,7 +40,7 @@ var init = () => {
         c2.getInfo = (amount) => Utils.getMathTo(getInfo(c2.level), getInfo(c2.level + amount));
     }
     
-        // c3
+    // c3
     {
         let getDesc = (level) => "c_3=1000^{" + level + "}";
         let getInfo = (level) => "c_3=" + getC3(level).toString(0);
@@ -49,7 +49,7 @@ var init = () => {
         c3.getInfo = (amount) => Utils.getMathTo(getInfo(c3.level), getInfo(c3.level + amount));
     }
     
-            // c4
+    // c4
     {
         let getDesc = (level) => "c_4=5000^{" + level + "}";
         let getInfo = (level) => "c_4=" + getC4(level).toString(0);
