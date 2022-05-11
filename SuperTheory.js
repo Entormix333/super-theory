@@ -8,11 +8,11 @@ var id = "my_custom_theory_id";
 var name = "Super Theory";
 var description = "This Theory this.";
 var authors = "Karen";
-var version = 1;
+var version = 2;
 
 var currency;
-var c1, c2;
-var c1Exp, c2Exp;
+var c1, c2, c3, c4;
+var c1Exp, c2Exp, c3Exp, c4Exp;
 
 var achievement1, achievement2;
 var chapter1, chapter2;
@@ -38,6 +38,24 @@ var init = () => {
         c2 = theory.createUpgrade(1, currency, new ExponentialCost(5, Math.log2(10)));
         c2.getDescription = (_) => Utils.getMath(getDesc(c2.level));
         c2.getInfo = (amount) => Utils.getMathTo(getInfo(c2.level), getInfo(c2.level + amount));
+    }
+    
+        // c3
+    {
+        let getDesc = (level) => "c_3=1000^{" + level + "}";
+        let getInfo = (level) => "c_3=" + getC3(level).toString(0);
+        c3 = theory.createUpgrade(1, currency, new ExponentialCost(1e19, Math.log2(10)));
+        c3.getDescription = (_) => Utils.getMath(getDesc(c3.level));
+        c3.getInfo = (amount) => Utils.getMathTo(getInfo(c3.level), getInfo(c3.level + amount));
+    }
+    
+            // c4
+    {
+        let getDesc = (level) => "c_4=5000^{" + level + "}";
+        let getInfo = (level) => "c_4=" + getC4(level).toString(0);
+        c4 = theory.createUpgrade(1, currency, new ExponentialCost(1e150, Math.log2(10)));
+        c4.getDescription = (_) => Utils.getMath(getDesc(c4.level));
+        c4.getInfo = (amount) => Utils.getMathTo(getInfo(c4.level), getInfo(c4.level + amount));
     }
 
     /////////////////////
