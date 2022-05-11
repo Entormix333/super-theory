@@ -7,7 +7,7 @@ import { Utils } from "./api/Utils";
 var id = "my_custom_theory_id";
 var name = "Super Theory";
 var description = "This Theory this.";
-var authors = "Entornix333";
+var authors = "Karen";
 var version = 1;
 
 var currency;
